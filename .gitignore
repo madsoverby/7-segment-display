@@ -1,0 +1,11 @@
+# KiCad temporary and generated files
+*.kicad_prl
+*.kicad_pcb-bak
+*.kicad_sch-bak
+*.kicad_wks
+*.bak
+*.tmp
+*.dsn
+*.net
+*.xml
+*-backups/
