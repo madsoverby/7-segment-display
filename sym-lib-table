@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "button_3_pins")(type "KiCad")(uri "/home/mads/.local/share/kicad/9.0/symbols/button_3_pins.kicad_sym")(options "")(descr ""))
+)
