@@ -65,14 +65,14 @@ void loop() {
 
 
 
-    // Konverter til heltal, fx 236 hvis du vil vise 23.6 som 3 cifre
+    // Convert to an integer, e.g. 236 if you want to display 23.6 using 3 digits.
     int tempInt = (int)(tempC * 10); // 236
 
     int hundrede = tempInt / 100;           // 2
     int tiere = (tempInt / 10) % 10;       // 3
     int enere = tempInt % 10;              // 6
 
-    // Vis cifre på display
+    // Display the digits on the display.
     for (int i = 0; i <= 3; i ++){
       seg_tal(16);
     }
