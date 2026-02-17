@@ -9,7 +9,7 @@ It is designed specifically for ESP32 hardware.
 
 ## 🔍 Technical Overview
 
-The system controls a single 7-segment LED display by driving each segment individually via ESP32 GPIO pins.
+The system controls 7 LEDs each segment is individual driving via ESP32 GPIO pins.
 
 A push button is connected for user interaction (e.g., incrementing displayed values).
 
@@ -25,7 +25,7 @@ The project focuses on:
 ## 🧰 Hardware Requirements
 
 - ESP32 development board
-- Single-digit 7-segment display
+- 7 LEDs
 - 220–330Ω current-limiting resistors
 - Push button
 - Breadboard and jumper wires

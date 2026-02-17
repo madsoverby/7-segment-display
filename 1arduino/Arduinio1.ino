@@ -8,9 +8,12 @@
 
 #define BUT_PIN 0
 
+// defines all the pins
+
 int  butState = 0;
 
 int inputTal = 0;
+
 
 void setup() {
   // put your setup code here, to run once:
@@ -25,40 +28,37 @@ void setup() {
 
   pinMode(BUT_PIN, INPUT_PULLUP);
 
+  // setting all segmendts to be OUTPUT
+  // and beginign Serial comunication
+
 
 
 
   Serial.begin(115200);
 
 }
-
 /*
-
-1 - 9 er tal
-
-10 - 15 ewr til bogstav F
-
-16 er en tænke animation
-
+ 0 - 9 is numbers
+ 10 - 15 is letters A - F
+ 16 is a wating animation
 */
-
 void loop() {
   // put your main code here, to run repeatedly:
   if (Serial.available()){
-    String input = Serial.readStringUntil('\n'); // læs linje
-    input.trim();                                // fjern \r og mellemrum
+    String input = Serial.readStringUntil('\n'); // reading a line
+    input.trim();                                // delets \r and space
     inputTal = input.toInt(); 
 
-    seg_tal(inputTal);
+    seg_num(inputTal);
   }
   delay(100);
 }
 
 
 
-void seg_tal(int tal){
+void seg_num(int tal){
 
-  
+  //declanrin all letters, numbers and the animation and puts it all in på a funtion
   if (tal == 10){
     digitalWrite(SEG_A, 1);
     digitalWrite(SEG_B, 1);
