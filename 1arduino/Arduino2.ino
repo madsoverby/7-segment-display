@@ -23,10 +23,10 @@ int inputTal = 0;
 
 void setup() {
   // put your setup code here, to run once:
-  // Aktiver intern pull-up på ESP32 (kan erstatte ekstern 4.7kΩ, men mindre stabilt)
+  // Enable the internal pull-up resistor on the ESP32 (can replace the external 4.7kΩ resistor, but is less stable).
   pinMode(ONE_WIRE_BUS, INPUT_PULLUP);
 
-  sensors.begin(); // Start kommunikation med DS18B20
+  sensors.begin(); // Start the communication with DS18B20
 
   pinMode(SEG_A, OUTPUT);
   pinMode(SEG_B, OUTPUT);
@@ -48,13 +48,9 @@ void setup() {
 }
 
 /*
-
-1 - 9 er tal
-
-10 - 15 er til bogstav F
-
-16 er en tænke animation
-
+ 0 - 9 is numbers
+ 10 - 15 is letters A - F
+ 16 is a wating animation
 */
 
 int butState = 1;
@@ -64,7 +60,7 @@ void loop() {
   // put your main code here, to run repeatedly:
   butState = digitalRead(BUT_PIN);
   if (butState == 0){
-    sensors.requestTemperatures(); // Læs temperatur fra sensor
+    sensors.requestTemperatures(); // Read the temperature from the sensor
     float tempC = sensors.getTempCByIndex(0);
 
 

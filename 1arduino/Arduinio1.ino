@@ -58,7 +58,7 @@ void loop() {
 
 void seg_num(int tal){
 
-  //declanrin all letters, numbers and the animation and puts it all in på a funtion
+  //declaring all letters, numbers and the animation and puts it all in på a function
   if (tal == 10){
     digitalWrite(SEG_A, 1);
     digitalWrite(SEG_B, 1);
