@@ -38,6 +38,7 @@ A push button is connected for user interaction (e.g., incrementing displayed va
 | G | 27 |
 | Button | 0 |
 | DS18B20 | 4|
+
 ⚠️ This configuration is designed for ESP32.  
 Using another board requires updating the pin configuration in the source code.
 
